@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Fiver</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Banco Fiver</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Nosotros</a>
+                </li>                
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contacto</a>
+                </li>               
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Productos</a>
+                </li>
+
+                <img src="imagenes/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="imagenes/menu.svg" alt="" class="nav__img">
+            </div>
+
+        </nav>
+        
+        <section class="hero__container container">
+            <h1 class="hero__title">Banco Fiver</h1>
+            <p class="hero__paragraph">No somos un Banco mas , somos el Banco que necesitas en tu bolsillo</p>
+        </section>
+    </header>
+    <main>
+        <section class="container about">
+            <h2 class="subtitle">¿Porque nosotros?</h2>
+        </section>
+        <section class="contenedor">
+            <div class="item">
+                <span class="cantidad" id="cont1" >+0</span >
+                <h2 class="seguidores">Clientes cree en nosotros</h2>
+            </div>
+            <div class="item">
+                <span class="cantidad" id="cont2" >0</span >
+                <h2 class="seguidores">en prestamos otorgados</h2>
+            </div>
+            <div class="item">
+                <span class="cantidad" id="cont3" >0</span >
+                <h2 class="seguidores">Min de demoras en atender tu consulta</h2>
+            </div>
+        </section>
+        <section>
+            <h3 class="prestamo">Calcula tu prestamo</h3>
+            <div class="monto">
+                <p>Ingresa el monto que queres solicitar</p>
+                <input type="range" name="" id="rango" min="1000" max="500000" step="1000" >
+                <span id="rango__prestamo">0</span>
+            </div>
+            <div class="cuotas">
+                <p>Ingresa la cantidad de cuotas que deseas abonar</p>
+                <input type="range" name="" id="rango__cuotas" min="3" max="24" step="1" >
+                <span id="rango__cuotas1">0</span>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="javascript/index.js"></script>
+</body>
+</html>
