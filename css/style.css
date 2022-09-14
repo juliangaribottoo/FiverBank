@@ -127,14 +127,30 @@ body{
     text-align: center;
 }
 
-.subtitle{
-    font-size: 3rem;
-}
 
 
 
 
 /*===CONTADOR====*/
+
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    min-height: 300px;
+    max-height: 600px;
+    background-color: #4469b4b6;
+    
+}
+
+.subtitle{
+    padding: 1em;
+    font-size: 3rem;
+}
+
+.item{
+    padding: 2em;
+
+}
 
 @keyframes animador {
     0% {
@@ -154,4 +170,9 @@ body{
 
 .animar{
     animation: animador 1.3s;
+}
+
+.calculador__Prestamo{
+    text-align: center;
+    align-items: center;
 }

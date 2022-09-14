@@ -1,24 +1,3 @@
-addEventListener('load',inicio,false);
-
-function inicio(){
-    document.getElementById('rango').addEventListener('change',cambioPrestamo,false);
-}
-function cambioPrestamo(){
-    document.getElementById('rango__prestamo').innerHTML= document.getElementById('rango').value;
-}
-
-addEventListener('load',inicioCuota,false);
-
-function inicioCuota(){
-    document.getElementById('rango__cuotas').addEventListener('change',cambioCuotas,false);
-}
-function cambioCuotas(){
-    document.getElementById('rango__cuotas1').innerHTML= document.getElementById('rango__cuotas').value;
-}
-
-function calculador(prestamo, cuotas){
-    return prestamo / cuotas;
-}
 
 let cont1=document.getElementById('cont1'),
 cont2=document.getElementById('cont2'),
@@ -47,5 +26,35 @@ let timpo3 = setInterval(() => {
     }
 }, 600);
 
-const operacion = prompt("Indiquenos que operacion desea realizar:1)Simular un prestamo, 2)solicitar tarjeta de credito, 3)cerrar mi cuenta, 4)contactarme con un asesor");
-const buscado = opciones.find(opcion => opcion.id == operacion);
+
+//SIMULADOR DE PRESTAMO
+
+const rangoPrestamo = document.getElementById ('rango');
+const textoPrestamo = document.getElementById ('rango__prestamo');
+const rangoCuotas = document.getElementById ('rango__cuotas');
+const textoCuotas = document.getElementById ('rango__cuotas1');
+
+rangoPrestamo.oninput = ()=>{
+    textoPrestamo.innerHTML = rangoPrestamo.value
+}
+
+rangoCuotas.oninput = ()=>{
+    textoCuotas.innerHTML = rangoCuotas.value
+}
+
+//caputar y mostrar resultado prestamo
+
+function caputarValores(){
+    let valorPrestamo = document.getElementById ('rango').value;
+    let valorCuota = document.getElementById ('rango__cuotas').value;
+
+    function calculador(valorPrestamo, valorCuota){
+        return valorPrestamo / valorCuota;
+    }
+    let valor= calculador(valorPrestamo, valorCuota);
+    let cuotaFinal = (valor * 12) / 100 + valor;
+    let resultadoPrestamo = document.getElementById('resultado__prestamo');
+    resultadoPrestamo.textContent = `En total abonara ${valorCuota} cuotas de $${cuotaFinal}, el CFT anual es del 144%. En caso de querer solicitar el prestamo póngase en contacto con nuestro equipo. Muchas gracias`
+}
+
+
