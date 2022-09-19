@@ -5,7 +5,6 @@
     --color-title: #011233;
 }
 
-
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -139,7 +138,6 @@ body{
     min-height: 300px;
     max-height: 600px;
     background-color: #4469b4b6;
-    
 }
 
 .subtitle{

@@ -1,4 +1,5 @@
 
+
 let cont1=document.getElementById('cont1'),
 cont2=document.getElementById('cont2'),
 cont3=document.getElementById('cont3')
@@ -43,14 +44,15 @@ rangoCuotas.oninput = ()=>{
 }
 
 //caputar y mostrar resultado prestamo
+function calculador(valorPrestamo, valorCuota){
+    return valorPrestamo / valorCuota;
+}
 
 function caputarValores(){
     let valorPrestamo = document.getElementById ('rango').value;
     let valorCuota = document.getElementById ('rango__cuotas').value;
 
-    function calculador(valorPrestamo, valorCuota){
-        return valorPrestamo / valorCuota;
-    }
+
     let valor= calculador(valorPrestamo, valorCuota);
     let cuotaFinal = (valor * 12) / 100 + valor;
     let resultadoPrestamo = document.getElementById('resultado__prestamo');
