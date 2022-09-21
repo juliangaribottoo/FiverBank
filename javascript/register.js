@@ -38,45 +38,40 @@ form2.addEventListener("submit", e=> {
     }
     if(entrar){
         parrafo.innerHTML = warning;
-    }    /*redireccion*/else{
-        location.href = "login.html"
-        }
+    }   
 });
 
-//Proceso de guardar usuario
+//capturar datos
+function guardarUsuarios(){
+    let misObjetos = {
+        users: document.getElementById('user__New').value ,
+        pass: document.getElementById('password__New').value,
+        namer: document.getElementById('name__New').value,
+        lastName: document.getElementById ('last__Name__New').value,
+        cel: document.getElementById ('cel__New').value,
+    }
+    guardadoLocalStorage(misObjetos)
+}
 
-const usuario = [];
-const password = [];
-const names = [];
-const lastName = [];
-const Cel = [];
-
-let guardarUsuario = document.getElementById ('guardar');
-
-guardarUsuario.addEventListener ('click',registarUsuario);
-
-function registarUsuario(){
-    let userG = document.getElementById('user__New').value;
-    let passwordG = document.getElementById ('password__New').value;
-    let nameC = document.getElementById ('name__New').value;
-    let lastNameG = document.getElementById ('last__Name__New').value;
-    let celG = document.getElementById ('cel__New').value;
-    
-usuario.push(userG);
-password.push(passwordG);
-names.push(nameC);
-lastName.push(lastNameG);
-Cel.push(celG);
-
-
-localStorage.setItem("usuario", JSON.stringify(usuario));
-localStorage.setItem("password", JSON.stringify(password));
-localStorage.setItem("name", JSON.stringify(names));
-localStorage.setItem("lastname", JSON.stringify(lastName));
-localStorage.setItem("cel", JSON.stringify(Cel));
-
-console.log(localStorage)
-
-
-
+let guardadoLocalStorage = function(misOb){
+    let redireccionar = false
+    if(nameNew.value == ""){
+    }
+    if(lastnameNew.value == ""){
+    }
+    if(celNew.value == ""){
+    }
+    if(userNew.value.length <6){
+    }
+    if(passwordNew.value.length <8){
+    }
+    else{
+        localStorage.setItem("usuarios", JSON.stringify(misOb)),
+        alert('El usuario se a generado correctamente, sera redirigido');
+        redireccionar = true
+    }
+    if(redireccionar){
+        location.href = "login.html"
+    }
+    //redireccion
 }
