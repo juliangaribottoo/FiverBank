@@ -1,83 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banco Fiver</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-    <header class="hero">
-        <nav class="nav container">
+    <header>
+        <nav class="nav">
             <div class="nav__logo">
-                <h2 class="nav__title">Banco Fiver</h2>
+                <h1><a href="index.html">Fiver Bank</a></h1>
             </div>
-
-            <ul class="nav__link nav__link--menu">
-                <li class="nav__items">
-                    <a href="#" class="nav__links">Inicio</a>
-                </li>
-                <li class="nav__items">
-                    <a href="#" class="nav__links">Nosotros</a>
-                </li>                
-                <li class="nav__items">
-                    <a href="#" class="nav__links">Contacto</a>
-                </li>               
-                <li class="nav__items">
-                    <a href="#" class="nav__links">Productos</a>
-                </li>
-
-                <img src="imagenes/close.svg" class="nav__close">
-            </ul>
-
             <div class="nav__menu">
-                <img src="imagenes/menu.svg" alt="" class="nav__img">
+                <ul>
+                    <li>Nosotros</li>
+                    <li>Productos</li>
+                    <li>Contacto</li>
+                </ul>
             </div>
-
+            <div class="nav__logueo">
+                <h4><a href="pages/login.html">Login</a></h4>
+            </div>
         </nav>
-        
-        <section class="hero__container container">
-            <h1 class="hero__title" id="saludo"></h1>
-            <p class="hero__paragraph">Recorda que no somos un Banco mas , somos el Banco que necesitas en tu bolsillo</p>
-        </section>
     </header>
     <main>
-        <section class="contenedor about">
-            <h2 class="subtitle">¿Porque nosotros?</h2>
-            <div class="item">
-                <span class="cantidad" id="cont1" >+0</span >
-                <h2 class="seguidores">Clientes creen en nosotros</h2>
-            </div>
-            <div class="item">
-                <span class="cantidad" id="cont2" >0</span >
-                <h2 class="seguidores">en prestamos otorgados</h2>
-            </div>
-            <div class="item">
-                <span class="cantidad" id="cont3" >0</span >
-                <h2 class="seguidores">Min de demoras en atender tu consulta</h2>
-            </div>
-        </section>
-        <section class="calculador__Prestamo">
-            <h3 class="prestamo">Calcula tu prestamo</h3>
-            <div class="monto">
-                <p>Ingresa el monto que queres solicitar</p>
-                <input type="range" name="" id="rango" min="1000" max="500000" step="1000" value="1000" >
-                <span id="rango__prestamo">0</span>
-            </div>
-            <div class="cuotas">
-                <p>Ingresa la cantidad de cuotas que deseas abonar</p>
-                <input type="range" name="" id="rango__cuotas" min="3" max="24" step="1" value="3">
-                <span id="rango__cuotas1">0</span>
-            </div>
-            <div class="confirmar">
-                <button type="button" onclick="caputarValores()">Cotiza</button>
-            </div>
-            <h3 id="resultado__prestamo"></h3>
-        </section>        
+            <header class="hero">
+                <div class="hero__Saludo">
+                    <div class="hero__Saludo__Texto">
+                        <h3 class="hero__Saludo__1">Bienvenido a tu banco</h3>
+                        <h3 class="hero__Saludo__2">Es rapido, es facil </h3>
+                        <h2 class="hero__Saludo__3">Es Fiver</h2>
+                    </div>
+                    <div class="hero__Img">
+                        <img class="hero__img__px" src="imagenes/creditCardTransparent.png" alt="">
+                    </div>
+                </div>
+                <div class="hero__Contador">
+                    <div class="contador__item">
+                        <span class="cantidad" id="cont1" >+</span >
+                        <h2 class="seguidores">Clientes creen en nosotros</h2>
+                    </div>
+                    <div class="contador__item">
+                        <h3>+</h3><span class="cantidad" id="cont2" >0</span >
+                        <h2 class="seguidores">en prestamos otorgados</h2>
+                    </div>
+                    <div class="contador__item">
+                        <h3>-</h3>  <span class="cantidad" id="cont3" >0</span >
+                        <h2 class="seguidores">Min de demoras en atender tu consulta</h2>
+                    </div>
+                </div>  
+            </header>
+            <section class="nosotros">
+                <div class="nosotros__Texto">
+                    <h4 class="nosotros__Titulo">Nuestros Inicios</h4>
+                </div>
+                <div class="nosotros__Contendido">
+                    <div class="nosotros__imagen">
+                        <img src="imagenes/nft.png" alt="">
+                    </div>
+                    <div class="nosotros__Chat">
+                        <div class="nosotros__burbujas">
+                            <p class="nosotros__Chat__1">Nacimos antes la necesidad de tener un Banco que nos represente a todos sin tanta burocaria y con todo lo que necesitas al alcance de tu mano</p>
+                            <p class="nosotros__Chat__1">Compra criptos, bonos , inversiones, Nft y mucho mas.</p>
+                            <p class="nosotros__Chat__1">Que estas esperando para abrir tu cuenta???</p>
+                            <a href="pages/register.html" class="nosotros__Chat__2">Quiero abrir mi cuenta!!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros__Valores">
+                    <p class="nosotros__Empresas">Apple</p>
+                    <p class="nosotros__Empresas">SPY</p>
+                    <p class="nosotros__Empresas">Bitcoin</p>
+                    <p class="nosotros__Empresas">Etherum</p>
+                    <p class="nosotros__Empresas">Usd</p>
+                    <p class="nosotros__Empresas">Euro</p>
+                    <p class="nosotros__Empresas">Merval</p>
+                    <p class="nosotros__Empresas">Galicia</p>
+                </div>
+            </section>
     </main>
-
     <script src="javascript/index.js"></script>
 </body>
 </html>

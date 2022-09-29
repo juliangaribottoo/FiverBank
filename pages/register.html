@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__logo">
+                <h1><a href="../index.html">Fiver Bank</a></h1>
+            </div>
+        </nav>
+    </header>
+<main class="main__Register">
+    <div class="fondo"></div>
+        <!-- register -->
+        <form action="" method="post" id="form2" >
+            <div class="form2">
+                <h3>Registar Usuario</h3>
+                <div class="grupo2">
+                    <label for="">Ingrese su nombre</label>
+                    <input type="text" name="" id="name__New"> <span class="barra"></span>
+                </div>
+                <div class="grupo2">
+                    <label for="">Ingrese su apellido</label>
+                    <input type="text" name="" id="last__Name__New"> <span class="barra"></span>
+                </div>
+                <div class="grupo2">
+                    <label for="">Ingrese su codigo de area y celular</label>
+                    <input type="number" name="" id="cel__New"> <span class="barra"></span>
+                </div>
+                <div class="grupo2">
+                    <label for="">Nombre de Usuario</label>
+                    <input type="text" name="" id="user__New"> <span class="barra" id="barra"></span>
+                </div>
+                <div class="grupo2">
+                <label for="">Ingrese su contraseña</label>
+                <input type="password" name="" id="password__New"><span class="barra"></span>
+                </div>
+                <div class="grupo2">
+                    <label for="">Ingrese nuevamente su contraseña</label>
+                    <input type="password" name="" id="password__revalidate"><span class="barra"></span>
+                </div>
+                <button type="submit" id="guardar">Validar datos</button>
+                <button type="button" onclick="guardarUsuarios()">Registrar</button>
+                <p class="warning" id="warning"></p>
+            </div>
+        </form>
+    </main>
+</main>
+<!-- include the script -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../javascript/register.js"></script>
+</body>
+</html>

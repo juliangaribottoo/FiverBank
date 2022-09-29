@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/pageuser.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__logo">
+                <h1><a href="../index.html">Fiver Bank</a></h1>
+            </div>
+            <div class="nav__menu">
+                <ul>
+                    <li>Nosotros</li>
+                    <li>Productos</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+            <div class="nav__logueo">
+                <h4 id="user__name"></h4>
+            </div>
+        </nav>
+    </header>
+    <main class="main__pageuser">
+        <section class="img__user"></section>
+        <section class="text__user">
+            <h4 id="saludo__user"></h4>
+            <p class="efecto__maquina"></p>
+        </section>
+        <section class="calculador__Prestamo">
+            <h3 class="prestamo">Calcula tu prestamo</h3>
+            <div class="monto">
+                <p>Ingresa el monto que queres solicitar</p>
+                <input type="range" name="" id="rango" min="1000" max="500000" step="1000" value="1000" >
+                <span id="rango__prestamo">0</span>
+            </div>
+            <div class="cuotas">
+                <p>Ingresa la cantidad de cuotas que deseas abonar</p>
+                <input type="range" name="" id="rango__cuotas" min="3" max="24" step="1" value="3">
+                <span id="rango__cuotas1">0</span>
+            </div>
+            <div class="confirmar">
+                <button type="button" onclick="caputarValores()">Cotiza</button>
+            </div>
+            <h3 id="resultado__prestamo"></h3>
+        </section>        
+    </main>    
+    <script src="../javascript/pageuser.js"></script>
+</body>
+</html>

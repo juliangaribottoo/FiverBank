@@ -1,3 +1,4 @@
+
 //Registro de usuario
 const userNew = document.getElementById('user__New')
 const passwordNew = document.getElementById ('password__New')
@@ -56,22 +57,31 @@ function guardarUsuarios(){
 let guardadoLocalStorage = function(misOb){
     let redireccionar = false
     if(nameNew.value == ""){
-    }
-    if(lastnameNew.value == ""){
-    }
-    if(celNew.value == ""){
-    }
-    if(userNew.value.length <6){
-    }
-    if(passwordNew.value.length <8){
-    }
-    else{
-        localStorage.setItem("usuarios", JSON.stringify(misOb)),
-        alert('El usuario se a generado correctamente, sera redirigido');
+        alertify.alert('Error', 'Revise nombre!', function(){ alertify.success(':)'); });
+    } else if(lastnameNew.value == ""){
+        alertify.alert('Error', 'Revise su Apellido!', function(){ alertify.success(':)'); });
+    } else if(celNew.value == ""){
+        alertify.alert('Error', 'Revise su celular!', function(){ alertify.success(':)'); });
+    }else if(userNew.value.length <6){
+        alertify.alert('Error', 'Revise su usuario!', function(){ alertify.success(':)'); });
+    }else if(passwordNew.value.length <8){
+        alertify.alert('Error', 'Revise su contraseña!', function(){ alertify.success(':)'); });
+    }else if(revalidatePasword.value !== passwordNew.value){
+        alertify.alert('Error', 'Revise su contraseña!', function(){ alertify.success(':)'); });
+    }else{/*ALERTA DE SWETALERT*/ 
+        localStorage.setItem("usuarios", JSON.stringify(misOb)), 
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Su usuario se creo correctamente, sera redirigido',
+            showConfirmButton: false,
+            timer: 3000
+        })
         redireccionar = true
     }
-    if(redireccionar){
-        location.href = "login.html"
-    }
-    //redireccion
-}
+    redireccionar === true? setTimeout((redireccionar) => {
+        window.location = "logueo.html"
+    }, 3001) : "";
+};
+
+
