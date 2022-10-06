@@ -52,8 +52,8 @@ header{
 }
 
 .logueo__texto{
-    width: 40%;
-    height: 25%;
+    width: 60%;
+    height: 15%;
     border: 1px solid var(--color-grey);
     position: absolute;
     top: 50%;
@@ -75,6 +75,7 @@ header{
     height: 100%;
     font-size: 4em;
     text-align: center;
+    align-content: center;
 }
 
 /*==REGISTRO==*/
@@ -86,8 +87,8 @@ header{
 }
 
 .registro__texto{
-    width: 62%;
-    height: 25%;
+    width: 60%;
+    height: 15%;
     border: 1px solid var(--color-yellow);
     position: absolute;
     top: 50%;
@@ -96,6 +97,7 @@ header{
     color: var(--color-yellow);
     box-shadow: 10px 10px 30px rgb(203, 252, 0.8);
     border-radius: 5px;
+    text-align: center;
 }
 
 .registro__texto:hover{
@@ -106,10 +108,9 @@ header{
 }
 
 .Titular2{
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     font-size: 4em;
-    text-align: center;
-    margin: 0 auto;
+    position: absolute;
 }
 

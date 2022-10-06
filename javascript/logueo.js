@@ -28,6 +28,6 @@ form.addEventListener("submit", e=> {
         alertify.success('Sesion iniciada')
     }
     entrar === false?  setTimeout((redireccionar) => {
-        window.location = "../index.html"
+        window.location = "pageuser.html"
     }, 3001):parrafo.innerHTML = warning 
 });

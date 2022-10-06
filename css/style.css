@@ -275,69 +275,249 @@ header{
     margin: .2em;
 }
 /*
-@media screen and (max-widht:1562){
-    .hero__Saludo{
+/*==SECCIONES PRODÇUCTÇOS==*/
 
-    }
-}
-*/
-.nav__logueo > h4 {
-    font-size: 1.2  em;
-    border: 1px solid var(--color-yellow);
-    border-radius: 10px;
-    color: var(--color-grey);
-    text-decoration: none;
-    background: var(--color-yellow);
-    margin: 2em;
-    padding: .5em 1em;
-}
-
-.main__pageuser{
+.productos{
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    overflow-y: auto;
-    perspective: 3px;
-}
-section {
-    background-size: cover;
-    color: white;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.img__user{
-    background-position: center center;
-    transform: translateZ(-0.5px) scale(2);
-    background-size: cover;
-    z-index: -1;
-    height: 50vh;
-}
-.text__user>
-{
-    z-index: -1;
-    transform: translateY(-25vh) translateZ(0px) scale(1);
-    padding-left:30px;
-    padding-right:30px;
-    text-align:center;
+    min-height: 600px;
+    max-height: 800px;
+    background: var(--color-grey);
 }
 
-.img__user{
+/*==TITULO==*/
+.productos__Titulo{
+    width: 100%;
+    min-height: 120px;
+    max-height: 160px;
+    border-bottom: 1px solid var(--color-yellow);
+    padding: 1em;
+}
+
+.title__product{
+    color: var(--color-yellow);
+    font-size: 2em;
+    font-weight: 400;
+}
+/*Seccion productos*/
+.productos__Secciones{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    min-height: 480px;
+    max-height: 640px;
+}
+
+.producots__Prestamos{
     width: 100%;
     height: 100%;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    background-image: url(../imagenes/pexels-helena-lopes-708440.jpg);
-    background-position: center;
-    background-size: contain;
-    position: absolute;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    display: flex;    
 }
 
-#saludo__user{
+.txt{
+    width: 60%;
+    height: 20%;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+
+.title__lend{
     width: 100%;
-    font-size: 5em;
-    position: absolute;
-    z-index: +1;
+    height: 100%;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--color-title);
+}
+
+.img__lend{
+    width: 40%;
+    height: 100%;
+    background-image: url(../imagenes/bolsa.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.productos__tarjetas{
+    width: 100%;
+    height: 100%;
+    display: flex;    
+}
+.img__Card{
+    width: 40%;
+    height: 100%;
+    background-image: url(../imagenes/prestamo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.title__card{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--color-title);
+}
+
+.productos__criptos{
+    width: 100%;
+    height: 100%;
+    display: flex; 
+}
+
+.img__Crypto{
+    width: 40%;
+    height: 100%;
+    background-image: url(../imagenes/bitcoin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.title__crypto{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--color-title);
+}
+
+/*Ultima seccion Registrarse*/
+.registarse{
+    width: 100%;
+    height: 20em;
+    background: var(--color-grey);
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    overflow: hidden;
+}
+
+.circulo1{
+    width: 20%;
+    height: 150%;
+    right: 0px;
+    background: var(--color-yellow);
+    border-radius: 100%;
+    transform: translate(450%,-50%);
+    
+}
+
+.circulo2{
+    width: 20%;
+    height: 150%;
+    right: 0px;
+    background: var(--color-yellow);
+    border-radius: 100%;
+    transform: translate(-40%,5%);
+}
+
+.texto__Registrarse__bg{
+    width: 100%;
+    text-align: center;
+}
+.texto__Rg{
+    width: 50%;
+    height: 100%;
+    background: var(--color-yellow);
+    margin: auto;
+    border-radius: 5px;
+}
+.texto__Rg > h4{
+    width: 100%;
+    height: 50%;
+    padding: 1em;
+}
+.texto__Rg > a{
+    background: var(--color-grey);
+    padding: .5em;
+    color: var(--color-title);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+/*=====FOOTER=====*/
+
+.footer__Index{
+    width: 100%;
+    height: 20em;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background: var(--color-grey);
+}
+
+.redes__Footer{
+    width: 100%;
+    height: 100%;
+    padding: .5em;
+    
+}
+.redes__datos{
+    width: 100%;
+    height: 60%;
+    
+    border-right: 1px solid var(--color-title);
+}
+.links__Footer{
+    width: 100%;
+    height: 100%;
+    padding: .5em;
+}
+.links__Datos{
+    width: 100%;
+    height: 60%;
+    border-right: 1px solid var(--color-title);
+}
+
+.telefonos__Footer{
+    width: 100%;
+    height: 100%;
+    padding: .5em;
+}
+.telefonos__Datos{
+    width: 100%;
+    height: 60%;
+}
+
+.info__Footer{
+    width: 100%;
+    height: 100%;
+    padding: .5em;
+    text-align: center;
+}
+.info__Footer>p{
+color: var(--color-title);
+padding: 1em;
+}
+.textos__Footer{
+    color: var(--color-title);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+    width: 100%;
+    height: 20%;
+}
+.links{
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.links__Footer{
+    color: var(--color-title);
+    text-decoration: none;
+}
+
+.envio__info{
+    text-align: center;
+}
+.button__info{
+    background: var(--color-yellow);
+    border: none;
+    font-size: .9em;
+    border: 1px solid var(--color-yellow);
+    border-radius: 1px;
+    color: var(--color-grey);
+
 }

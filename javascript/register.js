@@ -8,6 +8,7 @@ const revalidatePasword = document.getElementById ('password__revalidate')
 const nameNew = document.getElementById ('name__New')
 const lastnameNew = document.getElementById ('last__Name__New')
 const celNew = document.getElementById ('cel__New')
+const mailNew = document.getElementById('mail__New')
 
 //validacion datos
 form2.addEventListener("submit", e=> {
@@ -20,6 +21,10 @@ form2.addEventListener("submit", e=> {
     }
     if(lastnameNew.value == ""){
         warning += `Debe ingresar su apellido</br>`
+        entrar = true
+    }
+    if(mailNew.value == ""){
+        warning += `Debe ingresar su mail</br>`
         entrar = true
     }
     if(celNew.value == ""){
@@ -50,6 +55,7 @@ function guardarUsuarios(){
         namer: document.getElementById('name__New').value,
         lastName: document.getElementById ('last__Name__New').value,
         cel: document.getElementById ('cel__New').value,
+        mail: document.getElementById('mail__New').value,
     }
     guardadoLocalStorage(misObjetos)
 }
@@ -68,6 +74,10 @@ let guardadoLocalStorage = function(misOb){
         alertify.alert('Error', 'Revise su contraseña!', function(){ alertify.success(':)'); });
     }else if(revalidatePasword.value !== passwordNew.value){
         alertify.alert('Error', 'Revise su contraseña!', function(){ alertify.success(':)'); });
+    }else if(revalidatePasword.value !== passwordNew.value){
+        alertify.alert('Error', 'Revise su contraseña!', function(){ alertify.success(':)'); });
+    }else if(mailNew.value == ""){
+        alertify.alert('Error', 'Revise su mail!', function(){ alertify.success(':)'); });
     }else{/*ALERTA DE SWETALERT*/ 
         localStorage.setItem("usuarios", JSON.stringify(misOb)), 
         Swal.fire({

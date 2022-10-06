@@ -26,29 +26,41 @@
         </nav>
     </header>
     <main class="main__pageuser">
-        <section class="img__user"></section>
-        <section class="text__user">
+        <section class="saludo__inicio">
             <h4 id="saludo__user"></h4>
-            <p class="efecto__maquina"></p>
+            <p class="maquina__escribir" id="maquina__escribir">Como podemos ayudarte hoy?</p><br>
+                <p class="saldo__cuenta">Saldo en cuenta</p>
+                <div class="montos">
+                    <p id="saldos">$120.000</p>
+                    <button type="submit" class="ojo" id="ojo"><img src="../imagenes/visibilidad.png" alt=""></button>
+                </div>
+        </section>
+        <section class="img__fija">
         </section>
         <section class="calculador__Prestamo">
             <h3 class="prestamo">Calcula tu prestamo</h3>
-            <div class="monto">
-                <p>Ingresa el monto que queres solicitar</p>
-                <input type="range" name="" id="rango" min="1000" max="500000" step="1000" value="1000" >
-                <span id="rango__prestamo">0</span>
+            <div class="rangos">
+                <div class="monto">
+                    <p>Ingresa el monto que queres solicitar</p>
+                    <input type="range" name="" id="rango" min="1000" max="500000" step="1000" value="1000" >
+                    <span id="rango__prestamo">0</span>
+                </div>
+                <div class="cuotas">
+                    <p>Ingresa la cantidad de cuotas que deseas abonar</p>
+                    <input type="range" name="" id="rango__cuotas" min="3" max="24" step="1" value="3">
+                    <span id="rango__cuotas1">0</span>
+                </div>
+                <div class="confirmar">
+                    <button type="button" onclick="caputarValores()" class="button_conf">Cotiza</button>
+                </div>
             </div>
-            <div class="cuotas">
-                <p>Ingresa la cantidad de cuotas que deseas abonar</p>
-                <input type="range" name="" id="rango__cuotas" min="3" max="24" step="1" value="3">
-                <span id="rango__cuotas1">0</span>
-            </div>
-            <div class="confirmar">
-                <button type="button" onclick="caputarValores()">Cotiza</button>
-            </div>
-            <h3 id="resultado__prestamo"></h3>
-        </section>        
+        </section>      
+        <section>
+            
+        </section>  
+        
     </main>    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../javascript/pageuser.js"></script>
 </body>
 </html>
