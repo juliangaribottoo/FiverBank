@@ -31,3 +31,4 @@ form.addEventListener("submit", e=> {
         window.location = "pageuser.html"
     }, 3001):parrafo.innerHTML = warning 
 });
+

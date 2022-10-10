@@ -55,10 +55,160 @@
                 </div>
             </div>
         </section>      
-        <section>
-            
-        </section>  
-        
+        <section class="valores">
+            <div class="seleccion__Titulo">
+                <h4>Selecciona la opcion que queres hacer!!</h4>
+            </div>
+            <div class="seleccion_Operacion">
+                <div class="seleccion__Divisas">
+                    <img src="../imagenes/divisas.png" alt="imagenes de divisas" onclick="mostrarValores2()">
+                    <h5>Valores de divisas mundiales</h5>
+                </div>
+                <div class="seleccion__Cripto" onclick="mostrarValores()">
+                    <img src="../imagenes/coins.png" alt="imagen de criptomonedas">
+                    <h5>Valores de las Criptomonedas</h5>
+                </div>
+            </div>
+            <div class="valores__criptos" id="valores__criptos"">
+                <div class="valores__Close" id="btn__Close" onclick="cerrarValores()">
+                    <img src="../imagenes/close.png" alt="boton de cierre">
+                </div>
+                <table class="tabla__css">
+                    <thead>
+                        <tr>
+                            <th>Simbolos</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data"> 
+
+                    </tbody>
+                </table>
+            </div>          
+            <div class="valores__Divisas" id="valores__Divisas">
+                <div class="valores__Close2" id="btn__Close2" >
+                    <img src="../imagenes/close.png" alt="boton de cierre" onclick="cerrarValores2()">
+                </div>
+                <div class="divisas__caja" >
+                    <select name="" id="divisas">
+                    <option value="AED">AED</option>
+                    <option value="ARS">ARS</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="BSD">BSD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CLP">CLP</option>
+                    <option value="CNY">CNY</option>
+                    <option value="COP">COP</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="DOP">DOP</option>
+                    <option value="EGP">EGP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="FJD">FJD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="GTQ">GTQ</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF">HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR">INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY">JPY</option>
+                    <option value="KRW">KRW</option>
+                    <option value="KZT">KZT</option>
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PAB">PAB</option>
+                    <option value="PEN">PEN</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PKR">PKR</option>
+                    <option value="PLN">PLN</option>
+                    <option value="PYG">PYG</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SAR">SAR</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="TWD">TWD</option>
+                    <option value="UAH">UAH</option>
+                    <option value="USD" selected>USD</option>
+                    <option value="UYU">UYU</option>
+                    <option value="VND">VND</option>
+                    <option value="ZAR">ZAR</option>
+                    </select>
+                    <input type="number" id="cantidad__1">
+                </div>
+                <div class="taza__cambio">
+                    <button class="btn" id="taza">Cambio</button>
+                    <div class="cambio" id="cambio"></div>
+                </div>
+                <div class="divisas__caja2">
+                    <select name="" id="divisas2">
+                <option value="AED">AED</option>
+                <option value="ARS">ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="GBP">GBP</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="KZT">KZT</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PAB">PAB</option>
+                <option value="PEN">PEN</option>
+                <option value="PHP">PHP</option>
+                <option value="PKR">PKR</option>
+                <option value="PLN">PLN</option>
+                <option value="PYG">PYG</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SAR">SAR</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="TWD">TWD</option>
+                <option value="UAH">UAH</option>
+                <option value="USD" selected>USD</option>
+                <option value="UYU">UYU</option>
+                <option value="VND">VND</option>
+                <option value="ZAR">ZAR</option>
+                    </select>
+                    <input type="number" id="cantidad__2">
+                </div>
+            </div>
+        </section>
     </main>    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../javascript/pageuser.js"></script>

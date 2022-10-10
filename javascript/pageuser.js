@@ -87,4 +87,83 @@ function caputarValores(){
 }
 
 
+/*===PROCESO PARA OBTENER LOS VALORES DE LAS CRIPTOMONEDAS DESDE BINANCE*/
+let endpoint = 'https://api.binance.com/api/v3/ticker/price';
+fetch(endpoint)
+.then(response => response.json())
+.then( data => mostrarDatos(data))
+.catch(e => console.log(e))
+const mostrarDatos = (data)=>{
+    let body = "";
+    for (let i=0; i < data.length; i++){
+        body += `<tr><td>${data[i].symbol}</td><td>${data[i].price}</td></tr>`;
+    }
+    document.getElementById('data').innerHTML = body;
+}
+
+/*====MOSTRAR VALORES CRIPTO EN PANTALLA=====*/
+
+function mostrarValores(){
+    let criptos= document.getElementById('valores__criptos');
+    criptos.style.display= "block";
+}
+
+/*boton funcionamiento cerrar visor de valores */
+function cerrarValores(){
+    let close= document.getElementById('valores__criptos');
+    close.style.display= "none";
+}
+
+/*====MOSTRAR VALORES CRIPTO EN PANTALLA=====*/
+
+function mostrarValores2(){
+    let divisas= document.getElementById('valores__Divisas');
+    divisas.style.display= "block";
+}
+
+/*boton funcionamiento cerrar visor de valores */
+function cerrarValores2(){
+    let close= document.getElementById('valores__Divisas');
+    close.style.display= "none";
+}
+
+/*====MOSTRAR VALORES DIVISAS EN PANTALLA=====*/
+
+//tomando los valores del html
+const moneda1 = document.getElementById('divisas');
+const moneda2 = document.getElementById('divisas2');
+const cantidad1 = document.getElementById('cantidad__1');
+const cantidad2 = document.getElementById('cantidad__2');
+const cambio = document.getElementById('cambio');
+const btn= document.getElementById('taza')
+
+//Fetch para traer los valores de api
+
+
+function calcularDivisas(){
+    const monedaOne = moneda1.value;
+    const monedaTwo = moneda2.value;
+    fetch(`https://open.er-api.com/v6/latest/${monedaOne}`)
+    .then(response => response.json())
+    .then(result => {
+        const taza = result.rates[monedaTwo];
+        cambio.innerText= `1 ${monedaOne} = ${taza} ${monedaTwo}`;
+        
+        cantidad2.value = (cantidad1.value * taza).toFixed(2)
+    })
+}
+
+//eventos para calcular divisas
+moneda1.addEventListener('change', calcularDivisas);
+cantidad1.addEventListener('input', calcularDivisas);
+moneda2.addEventListener('change', calcularDivisas);
+cantidad2.addEventListener('input', calcularDivisas);
+btn.addEventListener('click', ()=>{
+    const temp = moneda1.value;
+    moneda1.value = moneda2.value;
+    moneda2.value = temp;
+    calcularDivisas();
+})
+
+calcularDivisas()
 

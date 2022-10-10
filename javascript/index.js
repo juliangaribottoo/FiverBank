@@ -39,28 +39,3 @@ function capturar(){
     console.log(enviarInfo.value)
 }
 
-/*Enviar mail*/ 
-const nodemailer = import('nodemailer');
-enviarMail = async ()=>{
-    const config = {
-        host: 'smtp.gmail.com',
-        port: 587,
-        auth :{
-            user: 'garibottojulian@gmail.com',
-            pass: 'ofvcheuynufcpkfa'
-        }
-    }
-    const mensaje= {
-        from: 'garibottojulian@gmail.com',
-        to : `garibottojulian@gmail.com`,
-        subject : 'correo de prueba',
-        text : 'enviando prueba',   
-        }
-    
-    const transport= nodemailer.createTransport(config);
-
-    const info = await transport.sendMail(mensaje);
-
-    console.log(info)
-}
-enviarMail();
